@@ -12,7 +12,7 @@ module Integrity
 
       def deliver!
         @tweet = Twitter::Base.new(Twitter::HTTPAuth.new(@config["email"], @config["pass"]))
-        @tweet.update(short_message)
+        @tweet.update("#{build.project.name}: #{short_message}")
       end
       
     end
