@@ -12,12 +12,14 @@ Setup Instructions
 ==================
 
 Step 1. Install this gem via `sudo gem install -s http://gems.github.com 
-cwsaylor-integrity-twitter`
+hchoroomi-integrity-twitter`
 
 Step 2. Add the following lines to your Rackup (ie, `config.ru`) file:
 
     require "rubygems"
-    require "notifier/twitter"
+    require "notifier/integrity_twitter"
+
+    Integrity::Notifier.register(Integrity::Notifier::IntegrityTwitter)
   
 Step 3. Profit! Just kidding. Edit the project and update your twitter email
 address and password.
